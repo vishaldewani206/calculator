@@ -45,33 +45,39 @@ button.addEventListener('click', sum);
 function sum() {
   myEquation = screen.textContent;
   equation.onclick = () => (screen.innerHTML = myEquation);
-  console.log(value);
-  if (value.charAt(0) == '+') {
-    console.log('working');
 
+  if (value.charAt(0) == '+') {
     value = value.substring(1);
     valueB = Number(valueB);
     value = Number(value);
     solution = valueB + value;
     screen.innerHTML = solution;
+    opeartion1.innerHTML = solution;
+    opeartion2.innerHTML = null;
   } else if (value.charAt(0) == '-') {
     value = value.substring(1);
     valueB = Number(valueB);
     value = Number(value);
     solution = valueB - value;
     screen.innerHTML = solution;
+    opeartion1.innerHTML = solution;
+    opeartion2.innerHTML = null;
   } else if (value.charAt(0) == '/') {
     value = value.substring(1);
     valueB = Number(valueB);
     value = Number(value);
     solution = valueB / value;
     screen.innerHTML = solution;
+    opeartion1.innerHTML = solution;
+    opeartion2.innerHTML = null;
   } else if (value.charAt(0) == '*') {
     value = value.substring(1);
     valueB = Number(valueB);
     value = Number(value);
     solution = valueB * value;
     screen.innerHTML = solution;
+    opeartion1.innerHTML = solution;
+    opeartion2.innerHTML = null;
   }
 }
 let d = document.querySelector('.d');
